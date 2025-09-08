@@ -1,12 +1,9 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './assets/pages/Home'
 import Login from './assets/pages/Login'
 
 function App() {
-  
-
   return (
     <div>
      <BrowserRouter>
