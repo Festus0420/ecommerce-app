@@ -1,50 +1,66 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-
 
 function Login() {
-    const [formData, setFormData] = useState({ username: '', password: '' });
-    const [message, setMessage] = useState('');
-
+    const [formData, setFormData] = useState({
+        username: '',
+        password: ''
+    });
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        setError(''); // Clear error when user types
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); 
-        try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', formData);
-            setMessage(response.data.message);
-        } catch (error) {
-            setMessage(error.response?.data?.message || 'Login Error Please try again');
+        e.preventDefault();
+        
+        // Demo validation
+        if (formData.username === 'demo' && formData.password === 'password') {
+            alert('Login successful! (Demo Mode)');
+        } else {
+            setError('Invalid credentials. Try username: demo, password: password');
         }
-    }
+    };
 
     return (
         <div className="login-container">
             <form className="login-form" onSubmit={handleSubmit}>
-                <h2>Login</h2>
-                <input>
-                type="text"
-                name="username"
-                placeholder="Username"
-                value={formData.username}   
-                onChange={handleChange}
-                required    
-                </input>
+                <h2>Welcome Back</h2>
+                <p className="login-subtitle">Please enter your credentials to login</p>
+                
+                <div className="form-group">
+                    <label htmlFor="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        value={formData.username}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-                <input>
-                type="password"
-                name="password"
-                placeholder="Password"  
-                value={formData.password}
-                onChange={handleChange}
-                required        
-                </input>
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-                <button type="submit">Login</button>
-                {message && <p className="login-message">{message}</p>}
+                {error && <p className="error-message">{error}</p>}
+                
+                <button type="submit" className="login-button">
+                    Login
+                </button>
+
             </form>
         </div>
     );
