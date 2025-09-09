@@ -14,7 +14,7 @@ const Home = () => {
             name: "Wireless Headphones",
             price: 99.99,
             description: "High-quality wireless headphones with noise cancellation",
-            image: "https://placehold.co/300x300?text=Headphones"
+            image: ".img/src/assets/pages/Headphone.PNG"
         },
         {
             _id: 2,
