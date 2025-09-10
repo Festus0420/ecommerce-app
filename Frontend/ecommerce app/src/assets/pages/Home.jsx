@@ -1,6 +1,10 @@
 // import axios from 'axios';
 // import { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard';
+import image1 from '../images/Headphone.PNG';
+import image2 from '../images/Laptop.PNG';
+import image3 from '../images/Smartphone.PNG';
+import image4 from '../images/Smartwatch.PNG';  
 
 const Home = () => {
     // const [products, setProducts] = useState([]);
@@ -14,28 +18,28 @@ const Home = () => {
             name: "Wireless Headphones",
             price: 99.99,
             description: "High-quality wireless headphones with noise cancellation",
-            image: ".img/src/assets/pages/Headphone.PNG"
+            image: image1
         },
         {
             _id: 2,
             name: "Smart Watch",
             price: 199.99,
             description: "Feature-rich smartwatch with health tracking",
-            image: "https://placehold.co/300x300?text=Watch"
+            image: image3
         },
         {
             _id: 3,
             name: "Laptop",
             price: 999.99,
             description: "Powerful laptop for work and gaming",
-            image: "https://placehold.co/300x300?text=Laptop"
+            image: image2
         },
         {
             _id: 4,
             name: "Smartphone",
             price: 699.99,
             description: "Latest smartphone with advanced camera",
-            image: "https://placehold.co/300x300?text=Phone"
+            image: image4
         }
     ];
 
