@@ -3,8 +3,8 @@
 import ProductCard from '../../components/ProductCard';
 import image1 from '../images/Headphone.PNG';
 import image2 from '../images/Laptop.PNG';
-import image3 from '../images/Smartphone.PNG';
-import image4 from '../images/Smartwatch.PNG';  
+import image3 from '../images/Smartphones.jpg';
+import image4 from '../images/Watch.PNG';  
 
 const Home = () => {
     // const [products, setProducts] = useState([]);
@@ -45,17 +45,16 @@ const Home = () => {
 
 
     return (
-        <div className="product-grid">
-            {/* {products.map(p => <ProductCard key={p._id} product={p} />)} */}
-           
-       <div className="container">
-            <h1 className="page-title">Featured Products</h1>
+        <div className="container">
+            <h1 className="page-title">Discover Our Products</h1>
             <div className="product-grid">
                 {dummyProducts.map(product => (
-                    <ProductCard key={product._id} product={product} />
+                    <ProductCard 
+                        key={product._id} 
+                        product={product}
+                    />
                 ))}
             </div>
-        </div>
         </div>
     );
 };
