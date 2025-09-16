@@ -37,10 +37,6 @@ const products = [
 ];
 
 function App() {
-  return <ProductListing products={products} />;
-}
-
-function App() {
   return (
     <div>
      <BrowserRouter>
