@@ -4,6 +4,11 @@ import Home from './assets/pages/Home'
 import Login from './assets/pages/Login'
 import Cart from './assets/pages/Cart'
 import ProductListing from './assets/pages/ProductListing'
+import image1 from './assets/images/Headphone.PNG';
+import image2 from './assets/images/Laptop.PNG';
+import image3 from './assets/images/Smartwatch.PNG';
+import image4 from './assets/images/Smartphone.jpg';
+
 
 const products = [
   {
@@ -15,7 +20,7 @@ const products = [
   },
   {
     _id: 2,
-    name: "Smart Watch",
+    name: "Smartwatch",
     price: 199.99,
     description: "Feature-rich smartwatch with health tracking",
     image: image3
@@ -25,7 +30,7 @@ const products = [
     name: "Laptop",
     price: 999.99,
     description: "Powerful laptop for work and gaming",
-    image: iamge2
+    image: image2
   },
   {
     _id: 4,

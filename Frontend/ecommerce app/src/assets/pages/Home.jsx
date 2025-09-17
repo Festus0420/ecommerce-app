@@ -4,7 +4,7 @@ import ProductCard from '../../components/ProductCard';
 import image1 from '../images/Headphone.PNG';
 import image2 from '../images/Laptop.PNG';
 import image3 from '../images/Smartphones.jpg';
-import image4 from '../images/Watch.PNG';  
+import image4 from '../images/Smartwatch.PNG';  
 
 const Home = () => {
     // const [products, setProducts] = useState([]);
@@ -22,7 +22,7 @@ const Home = () => {
         },
         {
             _id: 2,
-            name: "Smart Watch",
+            name: "Smartwatch",
             price: 199.99,
             description: "Feature-rich smartwatch with health tracking",
             image: image3
