@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './assets/pages/Home'
-import Login from './assets/pages/Login'
-import Cart from './assets/pages/Cart'
-import Register from './assets/pages/Register'
-import UserProfile from './assets/pages/UserProfile'
-import ProductListing from './assets/pages/ProductListing'
+import Home from './assets/pages/Home';
+import Login from './assets/pages/Login';
+import Cart from './assets/pages/Cart';
+import Register from './assets/pages/Register';
+import UserProfile from './assets/pages/UserProfile';
+import ProductListing from './assets/pages/ProductListing';
 import image1 from './assets/images/Headphone.PNG';
 import image2 from './assets/images/Laptop.PNG';
 import image3 from './assets/images/Smartwatch.PNG';
@@ -48,8 +48,12 @@ function App() {
     <div>
      <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<UserProfile />} />
+        <Route path="/productlisting" element={<ProductListing products={products} />} /> 
       </Routes>
       </BrowserRouter> 
         

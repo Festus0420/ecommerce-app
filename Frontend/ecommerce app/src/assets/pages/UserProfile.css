@@ -1,0 +1,70 @@
+:root {
+  --primary: #1e90ff;
+  --secondary: #00c9a7;
+  --background: #f9fbfd;
+  --text: #333;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --error: #ff4d4f;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--background);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid var(--primary);
+}
+
+.profile-card h2 {
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+
+.profile-card p {
+  margin: 0.5rem 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.edit-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary);
+}
+
+.error {
+  color: var(--error);
+  font-weight: bold;
+}
