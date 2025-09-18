@@ -3,6 +3,8 @@ import './App.css'
 import Home from './assets/pages/Home'
 import Login from './assets/pages/Login'
 import Cart from './assets/pages/Cart'
+import Register from './assets/pages/Register'
+import UserProfile from './assets/pages/UserProfile'
 import ProductListing from './assets/pages/ProductListing'
 import image1 from './assets/images/Headphone.PNG';
 import image2 from './assets/images/Laptop.PNG';

@@ -3,7 +3,7 @@
 import ProductCard from '../../components/ProductCard';
 import image1 from '../images/Headphone.PNG';
 import image2 from '../images/Laptop.PNG';
-import image3 from '../images/Smartphones.jpg';
+import image3 from '../images/Smartphone.jpg';
 import image4 from '../images/Smartwatch.PNG';  
 
 const Home = () => {
