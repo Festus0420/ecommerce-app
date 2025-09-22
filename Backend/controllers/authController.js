@@ -3,11 +3,11 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User'); 
 
 const register = async (req, res) => {
-    const { username, email, password } = req.body;
+    const { fullName, email, password, confirmPassword } = req.body;
     bycrypt.hash(password, 10, async (err, hash) => {
         if (err) return res.status(500).send('Error hashing password');
         try {
-            const newUser = await User.create({ username, email, password: hash });
+            const newUser = await User.create({ fullName, email, password: hash, confirmPassword: hash});
             res.status(201).json({ message: 'User registered', userId: newUser.id });
         } catch (error) {
             res.status(500).send('Error registering user');
