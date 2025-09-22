@@ -32,6 +32,7 @@ const Register = () => {
         if (password !== confirmPassword) {
             setError('Passwords do not match.');
             return;
+            
         }   
         if (password.length < 6) {
             setError('Password must be at least 6 characters long.');
@@ -72,6 +73,13 @@ const Register = () => {
                 <input  
                     type="password"
                     name="password"
+                    placeholder="Create Password"  
+                    value={formData.password}
+                    onChange={handleChange}
+                />  
+                <input  
+                    type="password"
+                    name="confirmPassword"
                     placeholder="Confirm Password"  
                     value={formData.confirmPassword}
                     onChange={handleChange}

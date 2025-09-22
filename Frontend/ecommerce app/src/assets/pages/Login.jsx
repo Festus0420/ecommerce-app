@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Login() {
     const [formData, setFormData] = useState({
-        username: '',
+        email: '',
         password: ''
     });
     const [error, setError] = useState('');
@@ -32,11 +32,11 @@ function Login() {
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
                     <input
-                        type="text"
+                        type="email"
                         id="username"
-                        name="username"
-                        placeholder="Enter your username"
-                        value={formData.username}
+                        name="email"
+                        placeholder="Enter email"
+                        value={formData.email}
                         onChange={handleChange}
                         required
                     />
