@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Cart.css';
+import img1 from '../images/Headphone.PNG'
+import img2 from '../images/Smartwatch.PNG'
 
 function Cart() {
   const [cartItems, setCartItems] = useState([
@@ -8,14 +10,14 @@ function Cart() {
       name: 'Wireless Headphones',
       price: 99.99,
       quantity: 1,
-      image: '/images/Headphone.PNG',
+      image: img1,
     },
     {
       id: 2,
       name: 'Smart Watch',
       price: 199.99,
       quantity: 2,
-      image: '/images/Smartwatch.PNG',
+      image: img2,
     },
   ]);
 

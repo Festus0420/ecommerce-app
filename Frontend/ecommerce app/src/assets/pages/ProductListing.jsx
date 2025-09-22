@@ -1,7 +1,9 @@
 import React from 'react';
 import './ProductListing.css';
 
+
 function ProductListing({ products }) {
+
   return (
     <div className="listing-container">
       <h2 className="listing-title">🛍️ Explore Our Products</h2>
@@ -13,7 +15,7 @@ function ProductListing({ products }) {
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <span className="price">${product.price.toFixed(2)}</span>
-              <button className="add-btn">Add to Cart</button>
+              <button className="add-btn" > Add to Cart </button>
             </div>
           </div>
         ))}

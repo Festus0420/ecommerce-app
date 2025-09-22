@@ -18,7 +18,7 @@ const UserProfile = ({ userId }) => {
           setError(data.message || 'Failed to load user details.');
         }
       } catch (err) {
-        setError('Network error. Please try again.');
+        setError('Network error. Please try again.',err);
       } finally {
         setLoading(false);
       }
