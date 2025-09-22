@@ -2,9 +2,10 @@ const { sequelize, DataTypes } = require('sequelize');
 const sequelize = require('..config/mysql');
 
 const User = sequelize.define('User', {
-    username: DataTypes.STRING,
+    fullName: DataTypes.STRING,
     password: DataTypes.STRING,
-    email: DataTypes.STRING,    
+    email: DataTypes.STRING,
+    confirmPassword: DataTypes.STRING
 
 });
 
