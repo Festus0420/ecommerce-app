@@ -2,7 +2,7 @@ import React from 'react';
 import './ProductListing.css';
 
 
-function ProductListing({ products }) {
+function ProductListing({ products, onaddToCart }) {
 
   return (
     <div className="listing-container">
@@ -15,7 +15,9 @@ function ProductListing({ products }) {
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <span className="price">${product.price.toFixed(2)}</span>
-              <button className="add-btn" > Add to Cart </button>
+              <button className="add-btn" onClick={() => onAddToCart(product)}> 
+                Add to Cart 
+              </button>
             </div>
           </div>
         ))}

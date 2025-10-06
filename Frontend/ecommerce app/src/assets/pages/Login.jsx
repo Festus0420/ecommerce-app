@@ -12,16 +12,32 @@ function Login() {
         setError(''); // Clear error when user types
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        // Demo validation
-        if (formData.username === 'demo' && formData.password === 'password') {
-            alert('Login successful! (Demo Mode)');
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    try {
+        const response = await fetch('http://localhost:5000/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: formData.email,
+                password: formData.password
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert('Login successful!');
+            // Optionally: save token, redirect, etc.
         } else {
-            setError('Invalid credentials. Try username: demo, password: password');
+            setError(data.message || 'Invalid credentials.');
         }
-    };
+    } catch (err) {
+        setError('Server error. Please try again later.');
+    }
+};
 
     return (
         <div className="login-container">

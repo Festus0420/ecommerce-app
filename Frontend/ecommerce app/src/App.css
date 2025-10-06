@@ -1,9 +1,19 @@
 /* Reset and base styles */
-#root {
+body, #root {
   max-width: 100%;
   margin: 0;
   padding: 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://www.vecteezy.com/photo/50751730-elegant-abstract-golden-landscape-with-cherry-blossoms-panoramic');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 /* Modern container styling */
@@ -164,4 +174,96 @@
 .product-card {
   animation: fadeIn 0.6s ease-out;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e90ff;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.navbar-logo { 
+  font-weight: bold; 
+  font-size: 2rem; 
+  letter-spacing: 2px; }
+
+.navbar-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 2.5rem; 
+  margin: 0; 
+  padding: 0; }
+
+  .navbar-links li { 
+    position: relative; }
+
+.navbar-links li a, .dropbtn { 
+  color: #033333;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem; 
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px; }
+
+.navbar-links li a:hover, .dropdown:hover { 
+  background: #1877F3}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 140px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  right: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #1e90ff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+.dropdown:hover .dropdown-content { 
+  display: block; }
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+  .navbar-links {
+    gap: 1.2rem;
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+}  
+
+.header { 
+  text-align: center; 
+  margin-top: 2rem; }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #183977;
+  color: #030235;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.footer-icons a { 
+  margin-left: 1rem; 
+  vertical-align: middle; }
 
